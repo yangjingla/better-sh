@@ -14,7 +14,6 @@ except ImportError:
     logger.warning("install [modelscope]..")
     install("modelscope")
     from modelscope import snapshot_download
-    
 
 
 def set_proxies():
