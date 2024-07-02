@@ -3,14 +3,14 @@
 # ==
 # pip install -U modelscope
 # pip install -U opencv-python
-
+set -x
 
 pip install -U huggingface_hub  #huggingface_hub==0.23.4
 
-
+DIR=${PWD}
 MODEL_ID=AI-ModelScope/gpt2
-ALLOW_PATTERNS='*.json, *.bin'
-LOCAL_DIR=/Users/yangjing/Desktop/RD/better-sh/hf_download/${MODEL_ID}
+ALLOW_PATTERNS='*.json'
+LOCAL_DIR=${PWD}/${MODEL_ID}
 
 mkdir -p ${LOCAL_DIR}
 

@@ -6,6 +6,7 @@
 
 
 export HF_HUB_DOWNLOAD_TIMEOUT=30
+DIR=${pwd}
 
 # ==
 # 下载模型
@@ -13,7 +14,7 @@ export HF_HUB_DOWNLOAD_TIMEOUT=30
 MODEL_ID=
 ALLOW_PATTERNS="*.bin"
 EXCLUDE="*.fp16.*"*
-LOCAL_DIR=/Users/yangjing/Desktop/RD/better-sh/hf_download/${MODEL_ID}
+LOCAL_DIR=${DIR}/${MODEL_ID}
 
 set -x
 # ==
@@ -24,6 +25,6 @@ set -x
 # ==
 DATASET_ID=tatsu-lab/alpaca
 ALLOW_PATTERNS="*.parquet"
-LOCAL_DIR=/Users/yangjing/Desktop/RD/better-sh/hf_download/${DATASET_ID}
+LOCAL_DIR=${DIR}/${DATASET_ID}
 
 huggingface-cli download ${DATASET_ID} --repo-type dataset --local-dir ${LOCAL_DIR} --include ${ALLOW_PATTERNS} --exclude  ${EXCLUDE}
