@@ -24,9 +24,8 @@ do
     fi
 
     set -x
-    huggingface-cli download ${MODEL_ID} --local-dir ${LOCAL_DIR}  --token=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
+    huggingface-cli download ${MODEL_ID} --local-dir ${LOCAL_DIR}  
     
-    # --token=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
     # --quiet 
     # --include ${ALLOW_PATTERNS} --exclude  ${EXCLUDE}
 
